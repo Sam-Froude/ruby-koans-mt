@@ -1,5 +1,5 @@
 class Koans 
-    def execute() 
-        true
+    def equality(x, y) 
+        x == y
     end
 end
