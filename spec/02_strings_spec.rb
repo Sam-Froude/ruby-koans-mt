@@ -73,4 +73,17 @@ RSpec.describe "Strings: " do
         expect("I love JavaScript".gsub("JavaScript", "Ruby")).to eq("I love ___")
     end
     
+    it "Repeats a string" do
+        message = "I love Ruby! "
+        expect(message * 2).to eq("I love Ruby! ___ ")
+    end
+
+    it "can insert text into a Ruby string" do
+        message = "I love Ruby!"
+        expect(message.insert(1, " really")).to eq("___")
+    end
+
+
+    # refactor test messages
+    # introduce zero based indexes, length/size/count, uppercase, lowercase
 end
