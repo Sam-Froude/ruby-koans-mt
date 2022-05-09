@@ -50,6 +50,27 @@ RSpec.describe "Strings: " do
         age = 15
         expect(___).to eq("I am 15 years old")
     end
-    
 
+    it "Strings can be modified" do
+        message = "I love JavaScript"
+        message["JavaScript"] = "Ruby"
+        expect(message).to eq("I love ___")
+    end
+
+    it "We can add to a string at a specific index position" do
+        message = "I love"
+        message[6] = " Ruby"
+        expect(message).to eq("I love ___")
+    end
+
+    it "We can replace parts of a string at specific index positions" do
+        message = "I love JavaScript"
+        message[6..16] = " Ruby"
+        expect(message).to eq("I love ___")
+    end
+
+    it "We can use Ruby methods to simplify string modification" do
+        expect("I love JavaScript".gsub("JavaScript", "Ruby")).to eq("I love ___")
+    end
+    
 end
