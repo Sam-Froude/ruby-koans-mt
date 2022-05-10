@@ -88,6 +88,18 @@ RSpec.describe "Strings: " do
         expect(message).to eq("I love ___")
     end
 
+    it "We can find the character at a certain index in a string, the count starts at zero" do
+       message = "I love Ruby"
+       expect(message[7]).to eq(___)
+    end
+
+    it "We can find the index of a character in a string" do
+        message = "I really love Ruby"
+        expect(message["R"]).to eq(___)
+        expect(message.index("e")).to eq(___)
+        expect(message.index("l")).to eq(___)
+     end
+ 
     it "We can add to a string at a specific index position" do
         message = "I love"
         message[6] = " Ruby"
@@ -114,7 +126,6 @@ RSpec.describe "Strings: " do
         expect(message.insert(1, " really")).to eq("___")
     end
 
-    # refactor test messages
-    # introduce zero based indexes for strings, 
+    # refactor test message
 
 end
