@@ -34,6 +34,13 @@ RSpec.describe "Strings: " do
     it "Sometimes a little cleaning is in order" do
         expect("\n Hello \n".strip).to eq(___)
     end
+
+    it "How long is a piece of STRING" do
+        expect("Hello".length).to eq(___)
+        expect("World".size).to eq(___)
+        expect("Hello World".length).to eq(___)
+    end
+
     
     it "Strings can be concatenated with the + operator" do
         expect("I am a " + "___").to eq("I am a string")
@@ -47,6 +54,14 @@ RSpec.describe "Strings: " do
         first_name = "Lord"
         last_name = "Farnsworth"
         expect("I am " + first_name + " " + last_name).to eq("I am ___")
+    end
+
+    it "... or can be pulled apart into a list of words" do
+        expect("Bananas Apples Mangoes".split).to eq(["Bananas", ___, ___])
+    end
+
+    it "There can be different levels of split" do
+        expect("Hello".split("")).to eq(["H", ___, ___, ___, ___])
     end
 
     it "Can do string interpolation using previosly defined variables" do 
@@ -100,6 +115,6 @@ RSpec.describe "Strings: " do
     end
 
     # refactor test messages
-    # introduce zero based indexes, length/size/count
+    # introduce zero based indexes for strings, 
 
 end
