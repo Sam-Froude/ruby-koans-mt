@@ -89,17 +89,17 @@ RSpec.describe "Strings: " do
     end
 
     it "We can find the character at a certain index in a string, the count starts at zero" do
-       message = "I love Ruby"
-       expect(message[7]).to eq(___)
+        message = "I love Ruby"
+        expect(message[7]).to eq(___)
     end
 
     it "We can find the index of a character in a string" do
         message = "I really love Ruby"
-        expect(message["R"]).to eq(___)
-        expect(message.index("e")).to eq(___)
+        expect(message.index("R")).to eq(___)
+        expect(message.index(___)).to eq(3)
         expect(message.index("l")).to eq(___)
-     end
- 
+    end
+
     it "We can add to a string at a specific index position" do
         message = "I love"
         message[6] = " Ruby"
