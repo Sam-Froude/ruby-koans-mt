@@ -3,22 +3,38 @@ require "rspec"
 # Let these be your first humble steps towards learning a new language.
 
 RSpec.describe "Strings: " do
-
+    
     # replace ___ with the correct answer to make the tests pass
-
+    
     it "Strings are there to represent text" do 
         expect("I am a string").to eq("I am a ___")
     end
-
+    
     it "Strings can be stored within a variable" do
         name = "Lord Farnsworth"
         expect(___).to be_a_kind_of(String)
     end
-
+    
     it "Strings can be represented in either double or single quotes" do
         expect("madetech").to eq('___')
     end
+    
+    it "Strings can be reversed when needed" do
+        expect("Hello".reverse).to eq("___")
+    end
+    
+    it "Strings can be louder when they need to be" do
+        expect("Loud".upcase).to eq(___)
+    end
+    
+    it "...or reduced to a whisper" do
+        expect("WhIsPeR".downcase).to eq(___)
+    end
 
+    it "Sometimes a little cleaning is in order" do
+        expect("\n Hello \n".strip).to eq(___)
+    end
+    
     it "Strings can be concatenated with the + operator" do
         expect("I am a " + "___").to eq("I am a string")
     end
@@ -83,7 +99,7 @@ RSpec.describe "Strings: " do
         expect(message.insert(1, " really")).to eq("___")
     end
 
-
     # refactor test messages
-    # introduce zero based indexes, length/size/count, uppercase, lowercase
+    # introduce zero based indexes, length/size/count
+
 end
