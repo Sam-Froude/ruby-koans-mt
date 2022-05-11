@@ -10,15 +10,15 @@ class CustomFormatter
     end
     
     def example_started(notification)
-        @output <<  RSpec::Core::Formatters::ConsoleCodes.wrap("Meditate upon: " << notification.example.description, :pending)
+        @output <<  RSpec::Core::Formatters::ConsoleCodes.wrap("Meditate upon: " << notification.example.description << "\n", :pending)
     end
 
     def example_failed(notification) # ExampleNotification
-        @output << RSpec::Core::Formatters::ConsoleCodes.wrap(" ...meditate some more", :failure)
+        @output << RSpec::Core::Formatters::ConsoleCodes.wrap("...meditate some more \n", :failure)
     end
 
     def example_passed(notification) # ExampleNotification
-        @output << RSpec::Core::Formatters::ConsoleCodes.wrap(" Passed!", :success)
+        @output << RSpec::Core::Formatters::ConsoleCodes.wrap("Passed! \n", :success)
     end
   
 end

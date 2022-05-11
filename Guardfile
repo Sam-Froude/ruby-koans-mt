@@ -24,7 +24,7 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec --fail-fast" do
+guard :rspec, cmd: "bundle exec rspec --fail-fast --require ./custom_formatter.rb -f CustomFormatter" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 

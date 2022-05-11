@@ -3,10 +3,10 @@ require "rspec"
 # Let these be your first humble steps towards learning a new language.
 
 RSpec.describe "Equalities: " do
-    # replace ___ with the correct answer to make the tests pass
+    # replace ___ with the correct answer to make the tests pass 
 
     it "We shall contemplate truth by testing reality, via equality" do 
-        expect(true).to eq(___)
+        expect(true).to eq(___) 
     end
 
     it "Not something is the opposite of it" do
