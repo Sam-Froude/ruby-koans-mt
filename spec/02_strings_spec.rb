@@ -1,6 +1,6 @@
 require "rspec"
 
-# Let these be your first humble steps towards learning a new language.
+# Let us string you along this journey along the Ruby Road.
 
 RSpec.describe "Strings: " do
     

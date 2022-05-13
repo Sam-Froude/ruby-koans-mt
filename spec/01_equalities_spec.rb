@@ -5,7 +5,7 @@ require "rspec"
 RSpec.describe "Equalities: " do
     # replace ___ with the correct answer to make the tests pass 
 
-    it "We shall contemplate truth by testing reality, via equality" do 
+    it "We shall contemplate truth by testing reality, via equality" do
         expect(true).to eq(___) 
     end
 

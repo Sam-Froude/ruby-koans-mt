@@ -20,5 +20,4 @@ class CustomFormatter
     def example_passed(notification) # ExampleNotification
         @output << RSpec::Core::Formatters::ConsoleCodes.wrap("Passed! \n", :success)
     end
-  
 end
