@@ -62,6 +62,15 @@ RSpec.describe "Numbers: " do
     expect(number).to eq(___)
   end
 
+  it "Sometimes we want to know what came before, and what will be" do 
+    number = 5
+    expect(number.next).to eq(___)
+    expect(number.pred).to eq(___)
+    expect(number.pred).to eq(___) #to know is not to change
+    expect(number).to eq(___)
+
+  end
+
   it "Sometimes we feel like the odd one out." do
     expect(5.odd?).to eq(true)
     expect(28.odd?).to eq(___)
@@ -78,28 +87,41 @@ RSpec.describe "Numbers: " do
     expect(15.145678.round(___)).to eq(15.146)
   end
 
-    
+  it "Sometimes we need to trim the fat" do 
+    expect(15.145678.truncate).to eq(15)
+    expect(17.56886.truncate).to eq(___)
+    expect(18.3465.truncate(___)).to eq(18.34)
+  end
+
   it "Sometimes we hit rock bottom." do
     expect(8.4.floor).to eq(___)
     expect(9.684.floor).to eq(___)
+    expect(___.floor(1)).to eq(14.5)
+    expect(___.75432.floor(___)).to eq(15.75)
   end
 
   it "And other we break through the ceiling." do
+    expect(8.2.ceil).to eq(___)
+    expect(9.834.ceil).to eq(___)
+    expect(10.1128.ceil(___)).to eq(10.12)
+    expect(19.48572.ceil(3)).to eq(___)
+  end
+
+  it "With great power comes great responsibility 🕷️" do
+    expect(2**3).to eq(___)
+    expect(___).to eq(9)
+  end
+
+  it "We sometimes need to see our numbers as a collection of individuals" do 
+    expect(123.digits).to eq([3, 2, ___])
+    expect(___.digits).to eq([1, 2, 3])
+  end
+
+  it "We know the beginning and the end... and therefore everything in between" do 
+    expect((0..5).to_a).to eq([0, 1, 2, ___, ___, 5])  
+    expect((0...5).to_a).to eq([0, 1, 2, ___, ___]) 
+    expect((___..___).to_a).to eq([7, 8, 9])  
+    expect((10...15).to_a).to eq([___])
+    expect((10..15).to_a).to eq([___])  
   end
 end
-
-
-
-
-
-<<-DOC
-    odd,
-    even,
-    exponents
-    rounding(ceil, floor, abs, round),
-    truncate,
-    next,
-    pred,
-    .digits,
-    range (1..10)
-DOC
