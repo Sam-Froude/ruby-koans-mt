@@ -125,7 +125,4 @@ RSpec.describe "Strings: " do
         message = "I love Ruby!"
         expect(message.insert(1, " really")).to eq("___")
     end
-
-    # refactor test message
-
 end
