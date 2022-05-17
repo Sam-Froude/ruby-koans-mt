@@ -7,8 +7,8 @@ RSpec.describe "Numbers: " do
   # replace ___ with the correct answer to make the tests pass
 
   it "Sometimes things are more different than they seem." do
-    expect(1.is_a?(Integer)).to be_a_kind_of(true)
-    expect(1.0.is_a?(Float)).to be_a_kind_of(true)
+    expect(1.is_a?(Integer)).to eq(true)
+    expect(1.0.is_a?(Float)).to eq(true)
 
     expect(300).to be_a_kind_of(___)
     expect(3.14).to be_a_kind_of(___) # Sometimes pi needs to be sliced with a dot
