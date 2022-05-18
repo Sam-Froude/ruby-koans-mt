@@ -31,7 +31,7 @@ RSpec.describe "Arrays: " do
     
     it "Just like strings, arrays are indexed" do
         array = [1,2,"three",true]
-        expect(array[1]).to eq(___)  
+        expect(array[1]).to eq(___)
         expect(array[___]).to eq(true) 
     end
 
@@ -113,23 +113,42 @@ RSpec.describe "Arrays: " do
         ]
         )
     end
-
-
+  
+    it "The last element may be less pop-ular" do 
+        array = ["a", "b", "c", "d"]
+        expect(array.pop).to eq(___)
+        expect(array).to eq([___, ___, ___])
+        expect(array.pop(2)).to eq([___, ___])
+        expect(array).to eq(___)
+    end
+    
+    it "First, let's shift things up a gear" do 
+        array = [
+                 "red ranger",
+                 "blue ranger", 
+                 "yellow ranger",
+                 "green ranger", 
+                 "park ranger"
+                ]
+        expect(array.shift).to eq(___)
+        expect(array).to eq(___)
+        expect(array.shift(2)).to eq([___, ___])
+        expect(array).to eq(___)
+    end
 
 end
 
 =begin
-  pop,
-  take,
-  push,
-  place,
   shift,
   unshift,
+  <<,
+  push,
+  insert,
+  take,
+  place,
   select,
   drop,
-  delete,
   delete_at,
-  <<,
   concat,
   join,
   uniq,
