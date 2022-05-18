@@ -5,34 +5,35 @@ require "rspec"
 RSpec.describe "Arrays: " do
 
     it "Let's array-nge some items" do
-        array = [1,2,3]
+        array = [1, 2, 3]
         expect(array.is_a?(Array)).to eq(___)
         expect(array).to be_a_kind_of(___)    
     end
     
     it "Let's not lead you astray, you can have more than numbers in an array" do
-        array = [1,2,"three",true]
+        array = [1, 2, "three", true]
         expect(array).to be_a_kind_of(___)  
     end
 
     it "Let's check what's top of the list" do
-        array = [1,2,3]
+        array = [1, 2, 3]
         expect(array.first).to eq(___)
         expect(array.first(2)).to eq([___, ___])
         expect(array.first(3)).to eq([___])
     end
 
     it "Let's check what's last" do
-        array = [1,2,3]
+        array = [1, 2,  3]
         expect(array.last).to eq(___)
         expect(array.last(2)).to eq([___, ___])
         expect(array.last(3)).to eq([___])
     end
     
     it "Just like strings, arrays are indexed" do
-        array = [1,2,"three",true]
+        array = [1, 2, "three", true, "five"]
         expect(array[1]).to eq(___)
         expect(array[___]).to eq(true) 
+        expect(array[-1]).to eq(___) 
     end
 
     it "We need to know how much is there in order to plan our week" do
@@ -42,7 +43,7 @@ RSpec.describe "Arrays: " do
     end
 
     it 'I open at the close' do
-      array = [1,2,3]
+      array = [1, 2, 3]
       expect(array.reverse).to eq(___)
     end
     
@@ -124,11 +125,11 @@ RSpec.describe "Arrays: " do
     
     it "First, let's shift things up a gear" do 
         array = [
-                 "red ranger",
-                 "blue ranger", 
-                 "yellow ranger",
-                 "green ranger", 
-                 "park ranger"
+                  "red ranger",
+                  "blue ranger", 
+                  "yellow ranger",
+                  "green ranger", 
+                  "park ranger"
                 ]
         expect(array.shift).to eq(___)
         expect(array).to eq(___)
@@ -136,14 +137,41 @@ RSpec.describe "Arrays: " do
         expect(array).to eq(___)
     end
 
+    it "Sometimes you can skip to the front" do
+      array = ["Bumblebee", "Optimus Prime", "Megatron", "Jonathan"]
+
+      expect(array.unshift("Ironhide")).to eq([___])
+      expect(array.unshift("Jazz")).to eq([___])
+    end
+
+    it 'sometimes you can just shovel it all  in' do
+      array = [1, 2, 3,4]
+      expect(array << 7).to eq([1,2,3,4,___])
+      expect(array << 12).to eq([___])
+    end
+    
+    it 'If you can\'t shovel you can always push' do
+      array = [1,2,3,4]
+      expect(array.push(9)).to eq([1,2,3,4,___])
+      expect(array.push(11)).to eq([___])
+      
+      #  sometimes different words can have the same meaning 
+      expect(array.append(50)).to eq([___])
+      expect(array.append(32)).to eq([___])
+    end
+  
+    it 'sometimes accuracy can be appreciated' do
+      cars = ['Audi','BMW','Mercedes']
+
+      expect(cars.insert(2,'Lexus')).to eq(['Audi', 'BMW', ___, 'Mercedes'])
+      expect(cars.insert(5,'Volvo')).to eq([___, ___, ___, ___, nil, ___])
+      expect(cars.insert(-2,'Tesla')).to eq([___, ___, ___, ___, ___, ___])
+    end
+    
 end
 
 =begin
-  shift,
-  unshift,
-  <<,
-  push,
-  insert,
+
   take,
   place,
   select,
