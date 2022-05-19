@@ -20,6 +20,7 @@ RSpec.describe "Arrays: " do
         expect(array.first).to eq(___)
         expect(array.first(2)).to eq([___, ___])
         expect(array.first(3)).to eq([___])
+        expect(array.take(3)).to eq([___]) # Sometimes different methods can do the same thing
     end
 
     it "Let's check what's last" do
@@ -137,6 +138,18 @@ RSpec.describe "Arrays: " do
         expect(array).to eq(___)
     end
 
+    it "Sometimes we can drop a given number of elements and see what would remain" do
+        array = [
+                  "Mario",
+                  "Yoshi",
+                  "Princess Peach", 
+                  "Bowser",
+                  "Luigi"
+                ]
+       expect(array.drop(1)).to eq([___, ___, ___, ___])
+       expect(array.drop(3)).to eq([___])
+    end
+
     it "Sometimes you can skip to the front" do
       array = ["Bumblebee", "Optimus Prime", "Megatron", "Jonathan"]
 
@@ -167,21 +180,33 @@ RSpec.describe "Arrays: " do
       expect(cars.insert(5,'Volvo')).to eq([___, ___, ___, ___, nil, ___])
       expect(cars.insert(-2,'Tesla')).to eq([___, ___, ___, ___, ___, ___])
     end
+
+    it 'Sometimes it can be useful to swap things around' do
+      months = ["Monday", "Tuesday", "Wednesday", "Thursday"]
+      days = ["January", "February", "March", "April", "May"]
+      months.replace(days)
+      expect(months).to eq([___])
+    end
+
+    it 'We can stitch arrays together' do
+      years = [2000, 2001, 2002]
+      seasons = ['Spring', 'Summer']
+      months = ['January', 'February', 'March']         
+      expect(years.concat(seasons)).to eq([___, ___, ___, ___, ___])
+      expect(months.concat(['April', 'May'], [1, 2, 3])).to eq(___)
+    end
+    
+    it 'We can join array elements into a string' do 
+      building_materials = ['brick', 'brick', 'brick']
+      expect(building_materials.join('-mortar-')).to eq(___)
+    end
     
 end
 
 =begin
-
-  take,
-  place,
-  select,
-  drop,
-  delete_at,
-  concat,
   join,
   uniq,
   2d array,
-  iterators (each, map),
-
+  iterators (each, map, select),
 
 =end

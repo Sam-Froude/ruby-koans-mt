@@ -53,6 +53,7 @@ RSpec.describe "Numbers: " do
 
   it "Sometimes we must change what we have created. These changes will outlast all." do
     number = 5 + 5
+
     expect(number).to eq(___)
     expect(number += 5).to eq(___)
     expect(number).to eq(___)
@@ -64,6 +65,7 @@ RSpec.describe "Numbers: " do
 
   it "Sometimes we want to know what came before, and what will be" do 
     number = 5
+    
     expect(number.next).to eq(___)
     expect(number.pred).to eq(___)
     expect(number.pred).to eq(___) #to know is not to change

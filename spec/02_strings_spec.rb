@@ -53,6 +53,7 @@ RSpec.describe "Strings: " do
     it "Strings stored in variables can also be concatenated" do
         first_name = "Lord"
         last_name = "Farnsworth"
+
         expect("I am " + first_name + " " + last_name).to eq("I am ___")
     end
 
@@ -66,6 +67,7 @@ RSpec.describe "Strings: " do
 
     it "Can do string interpolation using previosly defined variables" do 
         fruit = 'apple'
+
         expect("I ate an #{fruit}").to eq("I ate an ___")        
     end    
 
@@ -85,16 +87,19 @@ RSpec.describe "Strings: " do
     it "Strings can be modified" do
         message = "I love JavaScript"
         message["JavaScript"] = "Ruby"
+
         expect(message).to eq("I love ___")
     end
 
     it "We can find the character at a certain index in a string, the count starts at zero" do
         message = "I love Ruby"
+
         expect(message[7]).to eq(___)
     end
 
     it "We can find the index of a character in a string" do
         message = "I really love Ruby"
+
         expect(message.index("R")).to eq(___)
         expect(message.index(___)).to eq(3)
         expect(message.index("l")).to eq(___)
@@ -103,12 +108,14 @@ RSpec.describe "Strings: " do
     it "We can add to a string at a specific index position" do
         message = "I love"
         message[6] = " Ruby"
+
         expect(message).to eq("I love ___")
     end
 
     it "We can replace parts of a string at specific index positions" do
         message = "I love JavaScript"
         message[6..16] = " Ruby"
+
         expect(message).to eq("I love ___")
     end
 
@@ -118,11 +125,13 @@ RSpec.describe "Strings: " do
     
     it "Repeats a string" do
         message = "I love Ruby! "
+
         expect(message * 2).to eq("I love Ruby! ___ ")
     end
 
     it "can insert text into a Ruby string" do
         message = "I love Ruby!"
+
         expect(message.insert(1, " really")).to eq("___")
     end
 end
