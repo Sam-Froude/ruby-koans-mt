@@ -233,9 +233,29 @@ RSpec.describe "Arrays: " do
       expect(storage).to eq(['0rope', ___])
     end
     
+    it 'Sometimes we can iterate through an array to return a new array...' do
+      letters = ['a', 'b', 'c', 'd']
+      loud_letters = letters.map do |letter|
+        letter.upcase
+      end  
+      expect(loud_letters).to eq([___])
+    end
 
+    it '...And sometimes we can do that using indexes' do
+      numbers = [1, 2, 3, 4, 5]
+      numbers_multiplied = numbers.map.with_index do |number, index|
+        number*index
+      end
+      expect(numbers_multiplied).to eq([___])
+    end
+
+    it 'Sometimes we want to be picky about what we return (and who do we appreciate!)' do
+      numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      even_numbers = numbers.select do |number|
+        number % 2 == 0
+      end
+      expect(even_numbers).to eq([___])
+    end
+    
 end
 
-=begin
-  iterators (each_with_index, map, map_with_index, select),
-=end
