@@ -214,12 +214,19 @@ RSpec.describe "Arrays: " do
       expect([1, 1, 2, 3, 'a', 'a'].uniq).to eq(___)
     end
 
+    it 'We can iterate through the items in an array' do
+      backpack = ['rope', 'climbing shoes']
+      rucksack = ['first aid kit', 'radio']
+      backpack.each do |item|
+        rucksack << item
+      end
 
+      expect(rucksack).to eq(['first aid kit', 'radio', ___, ___])
+    end
+    
 
 end
 
 =begin
-  2d array,
-  iterators (each, map, select),
-
+  iterators (each_with_index, map, map_with_index, select),
 =end
