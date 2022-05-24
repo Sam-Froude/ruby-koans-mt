@@ -223,6 +223,15 @@ RSpec.describe "Arrays: " do
 
       expect(rucksack).to eq(['first aid kit', 'radio', ___, ___])
     end
+
+    it 'Sometimes when we iterate we need to keep track of the index' do
+      backpack = ['rope', 'climbing shoes']
+      storage = []
+      backpack.each_with_index do |item, index|
+        storage << index.to_s + item
+      end
+      expect(storage).to eq(['0rope', ___])
+    end
     
 
 end
