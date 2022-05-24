@@ -24,7 +24,7 @@ RSpec.describe "Arrays: " do
     end
 
     it "Let's check what's last" do
-        array = [1, 2,  3]
+        array = [1, 2, 3]
         expect(array.last).to eq(___)
         expect(array.last(2)).to eq([___, ___])
         expect(array.last(3)).to eq([___])
@@ -188,6 +188,13 @@ RSpec.describe "Arrays: " do
       expect(months).to eq([___])
     end
 
+    it "When arrays contain arrays you need to point twice" do
+      pokemon_teams = [['Pikachu', 'Squirtle', 'Butterfree'], ['Bulbasaur', 'Wobuffet', 'Charmander']]  
+      expect(pokemon_teams[0]).to eq(___)
+      expect(pokemon_teams[0][1]).to eq(___)
+      expect(pokemon_teams[___][___]).to eq('Charmander')
+    end
+
     it 'We can stitch arrays together' do
       years = [2000, 2001, 2002]
       seasons = ['Spring', 'Summer']
@@ -208,10 +215,10 @@ RSpec.describe "Arrays: " do
     end
 
 
+
 end
 
 =begin
-
   2d array,
   iterators (each, map, select),
 
