@@ -201,11 +201,17 @@ RSpec.describe "Arrays: " do
       expect(building_materials.join('-mortar-')).to eq(___)
     end
     
+    it "Sometimes we don't like copy cats" do 
+      alphabet = ['a', 'b', 'c', 'a']
+      expect(alphabet.uniq).to eq(___)
+      expect([1, 1, 2, 3, 'a', 'a'].uniq).to eq(___)
+    end
+
+
 end
 
 =begin
-  join,
-  uniq,
+
   2d array,
   iterators (each, map, select),
 
