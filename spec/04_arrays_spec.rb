@@ -1,6 +1,6 @@
 require "rspec"
 
-# There's always Array of hope.:)
+# There's always Array of hope.:)!!
 
 RSpec.describe "Arrays: " do
 

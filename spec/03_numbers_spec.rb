@@ -1,6 +1,6 @@
 require "rspec"
 
-# The Ruby spirits are counting on you.
+# The Ruby spirits are counting on you!!
 
 RSpec.describe "Numbers: " do 
 
@@ -99,7 +99,7 @@ RSpec.describe "Numbers: " do
     expect(8.4.floor).to eq(___)
     expect(9.684.floor).to eq(___)
     expect(___.floor(1)).to eq(14.5)
-    expect(___.75432.floor(___)).to eq(15.75)
+    expect(15.75432.floor(___)).to eq(15.75)
   end
 
   it "And other we break through the ceiling." do
